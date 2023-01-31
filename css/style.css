@@ -51,7 +51,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #rightColumn {
-	width: 100% /*calc(1176px / var(--is-4k));*/
+	width: 100%
 	display: grid;
 	grid-template-rows: auto auto auto auto;
 	justify-content: stretch;
@@ -62,7 +62,6 @@ h1,h2,h3,h4,h5,h6 {
 
 /* EPHEMERIDE */
 #ephemeride {
-	opacity: 1;
 	display: grid;
 	grid-template-rows: auto auto auto;
 
@@ -72,14 +71,14 @@ h1,h2,h3,h4,h5,h6 {
 	grid-row-end: 2;
 	align-self: end;
 	justify-self: end;
-	padding-right: calc(100px / var(--is-4k));
-	padding-bottom: calc(40px / var(--is-4k));
+	padding-right: 50px;
+	padding-bottom: 20px;
 }
 
 #datedujour {
 	margin: 0;
 	padding: 0;
-	font-size: calc(60pt / var(--is-4k));
+	font-size: 30pt;
 	text-transform: capitalize;
 	text-align: right;
 		
@@ -90,7 +89,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #saintdujour {
-	font-size: calc(50pt / var(--is-4k));
+	font-size: 25pt;
 	margin: 0;
 	padding: 0;
 
@@ -109,10 +108,10 @@ h1,h2,h3,h4,h5,h6 {
 #soleildujour {
 	color: #FADF43;
 	padding: 0;
-	font-size: calc(36pt / var(--is-4k));
+	font-size: 18pt;
 
 	display: grid;
-	grid-template-columns: calc(80px / var(--is-4k)) calc(150px / var(--is-4k)) calc(80px / var(--is-4k)) calc(130px / var(--is-4k));
+	grid-template-columns: 40px 75px 40px 65px;
 
 	grid-row-start: 3;
 	grid-row-end: 4;
@@ -158,8 +157,7 @@ h1,h2,h3,h4,h5,h6 {
 
 /* METEO */
 #meteo {
-	opacity: 1;
-	font-size: calc(36pt / var(--is-4k));
+	font-size: 18pt;
 
 	display: grid;
 	grid-template-columns: auto auto;
@@ -172,7 +170,7 @@ h1,h2,h3,h4,h5,h6 {
 	align-self: start;
 	justify-self: stretch;
 
-	padding: calc(20px / var(--is-4k)) calc(80px / var(--is-4k));
+	padding: 10px 40px;
 	background-color: rgba(45,187,255,.1);
 }
 
@@ -188,7 +186,7 @@ h1,h2,h3,h4,h5,h6 {
 	align-self: start;
 	justify-self: start;
 
-	font-size: calc(90pt / var(--is-4k));
+	font-size: 45pt;
 	color: #2DBBFF;
 }
 
@@ -201,9 +199,9 @@ h1,h2,h3,h4,h5,h6 {
 	justify-self: start;
 
 	color: #2dbbff;
-	font-size: calc(154pt / var(--is-4k));
-	line-height: calc(116pt / var(--is-4k));
-	padding-right: calc(40px / var(--is-4k));
+	font-size: 77pt;
+	line-height: 58pt;
+	padding-right: 20px;
 }
 
 #meteoNowIcon {
@@ -225,7 +223,7 @@ h1,h2,h3,h4,h5,h6 {
 	align-self: start;
 	justify-self: stretch;
 
-	font-size: calc(32pt / var(--is-4k));
+	font-size: 16pt;
 	color: #FADF43;
 
 	position: relative;
@@ -233,7 +231,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #meteoNowWindIcon {
-	font-size: calc(36pt / var(--is-4k));
+	font-size: 18pt;
 }
 
 #meteoNowDescription {
@@ -244,7 +242,7 @@ h1,h2,h3,h4,h5,h6 {
 	align-self: start;
 	justify-self: start;
 
-	font-size: calc(40pt / var(--is-4k));
+	font-size: 20pt;
 	color: #2DBBFF;
 
 	text-transform: capitalize;
@@ -270,28 +268,27 @@ h1,h2,h3,h4,h5,h6 {
 
 .meteoBoucle {
 	text-align: center;
-	min-width: calc(160px / var(--is-4k));
+	min-width: 80px;
 }
 
 	.meteoBoucle h3 {
-		font-size: calc(36pt / var(--is-4k));
+		font-size: 18pt;
 	}
 
 	.meteoIcon {
 		color: #2DBBFF;
-		font-size: calc(56pt / var(--is-4k));
-		line-height: calc(24pt / var(--is-4k));
+		font-size: 28pt;
+		line-height: 12pt;
 	}
 
 	.meteoTemp {
 		color: #FFF;
-		font-size: calc(50pt / var(--is-4k));
+		font-size: 25pt;
 	}
 
 
 /* mod VIGICRUE */
 #vigicrue {
-	opacity: 1;
 	overflow: hidden;
 
 	grid-column-start: 1;
@@ -301,14 +298,14 @@ h1,h2,h3,h4,h5,h6 {
 	align-self: start;
 	justify-self: stretch;
 
-	padding: calc(20px / var(--is-4k)) calc(100px / var(--is-4k));
-	font-size: calc(32pt / var(--is-4k));
+	padding: 10px 50px;
+	font-size: 16pt;
 	font-weight: inherit;
 
 	background-color: #283E4F;
 	background: 2% 0 no-repeat url(../img/vagues.svg) #283E4F;
 	background-size: auto 100%;
-	margin-top: calc(2px / var(--is-4k));
+	margin-top: 1px;
 
 	display: flex;
 	flex-wrap: nowrap;
@@ -318,11 +315,11 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #crueNiveauActuelTitre {
-	font-size: calc(30pt / var(--is-4k))
+	font-size: 15pt
 }
 
 #crueNiveauActuel {
-	margin-right: calc(120px / var(--is-4k));
+	margin-right: 60px;
 }
 #crueNiveauActuel:after {
 	content: 'm';
@@ -332,7 +329,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #crueDebitActuelTitre {
-	font-size: calc(30pt / var(--is-4k))
+	font-size: 15pt
 }
 
 #crueDebitActuel, #crueNiveauActuel {
@@ -345,70 +342,3 @@ h1,h2,h3,h4,h5,h6 {
 	margin-left: 5px;
 }
 
-
-
-/* mod EVENEMENTS */
-#evenements {
-	grid-column-start: 1;
-	grid-column-end: 2;
-	grid-row-start: 2;
-	grid-row-end: 3;
-	align-self: start;
-	justify-self: start;
-
-	padding: 25px;
-}
-
-.evenementsBoucle {
-	display: grid;
-	grid-template-columns: 40% auto;
-	margin-bottom: 20px;
-
-	padding: 40px 0;
-	border-bottom: 1px dotted #7fbdff;
-}
-
-.eventImg {
-	grid-column-start: 1;
-	grid-column-end: 2;
-	align-self: start;
-	justify-self: center;
-
-	margin-right: 25px;
-	box-shadow: #1f2228 0 0 10px;
-
-	max-height: calc(1000px / var(--is-4k));
-	max-width: calc(800px / var(--is-4k));
-}
-
-.eventRightColumn {
-	grid-column-start: 2;
-	grid-column-end: 3;
-	align-self: start;
-	justify-self: start;
-}
-
-.eventName {
-	font-size: calc(62pt / var(--is-4k));
-	color: #2DBBFF;
-	line-height: calc(64pt / var(--is-4k));
-}
-
-.eventAddress {
-	font-size: calc(50pt / var(--is-4k));
-}
-
-.eventDate {
-	font-size: calc(42pt / var(--is-4k));
-}
-
-.eventHoraire {
-	font-size: calc(42pt / var(--is-4k));
-	color: #2DBBFF;
-}
-
-.eventDesc {
-	margin-top: 25px;
-
-	font-size: calc(30pt / var(--is-4k));
-}
