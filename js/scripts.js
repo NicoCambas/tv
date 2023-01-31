@@ -50,7 +50,7 @@ const ephemeride = new Vue({
 		this.saintDuJour = ephemeris.getTodayEphemerisName()
 	},
 	mounted() {
-		this.ephemerideAnimate()
+		//this.ephemerideAnimate()
 	},
 	methods: {
 		ephemerideAnimate() {
@@ -80,7 +80,7 @@ const meteo = new Vue({
 		this.timer = setInterval(this.fetchMeteo, 600000);
 	},
 	mounted() {
-		this.meteoAnimate()
+		//this.meteoAnimate()
 	},
 	methods: {
 		fetchMeteo () {
@@ -186,7 +186,7 @@ const vigicrue = new Vue({
 		this.timer = setInterval(this.fetchVigicrue, 600000);
 	},
 	mounted() {
-		this.vigicrueAnimate()
+		//this.vigicrueAnimate()
 	},
 	methods: {
 		vigicrueAnimate() {
