@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Dashboard Capitainerie</title>
+	<link rel="stylesheet" href="css/reset.min.css">
+	<link rel="stylesheet" href="css/weather-icons-wind.min.css">
+	<link rel="stylesheet" href="css/weather-icons.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<div id="tvLayout">
+
+		<div id="rightColumn">
+			
+			<div id="ephemeride" v-cloak>
+				<div id="datedujour">{{ dateDuJour }}</div>
+				<div id="saintdujour">{{ saintDuJour }}</div>
+				<div id="soleildujour">
+					<i class="wi wi-sunrise soleilLeverIcon"></i><div class="soleilLever">{{ soleilLever }}</div>
+					<i class="wi wi-sunset soleilCoucherIcon"></i><div class="soleilCoucher">{{ soleilCoucher }}</div>
+				</div>
+			</div>
+
+			<div id="meteo" v-cloak>
+				<div id="meteoNowTemperatureActuelle">
+					<div id="meteoNowTemp">{{ meteoNow.temp + "°" }}</div>
+					<i id="meteoNowIcon" :class="meteoNow.icon"></i>
+					<div id="meteoNowWind">
+						<i id="meteoNowWindIcon" :class="meteoNow.windDirection"></i>
+						{{ meteoNow.wind }}
+					</div>
+					<div id="meteoNowDescription">{{ meteoNow.description }}</div>
+				</div>
+				
+				<div id="meteoPrevisions">
+					<div class="meteoBoucle" v-for="meteoPrevision in meteoPrevisions">
+						<h3>{{ meteoPrevision.time }}</h3>
+						<div class="meteoIcon"><i class="meteoSubIcon" :class="meteoPrevision.icon"></i></div>
+						<div class="meteoTemp">{{ meteoPrevision.temp + "°" }}</div>
+					</div>
+				</div>
+			</div>
+					
+			<div id="vigicrue" v-cloak>
+				<div id="crueNiveauActuelTitre">Hauteur</div><div id="crueNiveauActuel">+ {{ currentHeight | arrondiValeur }}</div>
+				<div id="crueDebitActuelTitre">Débit</div><div id="crueDebitActuel">{{ currentDebit | arrondiValeur  }}</div>
+				<!-- <canvas id="vigicrueChart"></canvas> -->
+			</div>
+
+		</div><!-- rightColumn -->
+		
+
+	</div><!-- tvLayout -->
+
+
+<!-- FICHIERS JS -->
+	<script src="config.js"></script>
+
+	<script src="js/vue.js"></script>
+	<script src="js/axios.min.js"></script>
+	<script src="js/moment.js"></script>
+	<!-- <script src="js/chart.js"></script> -->
+	<script src="js/ephemeris.min.js"></script>
+
+	<script src="js/scripts.js"></script>
+
+</body>
+</html>

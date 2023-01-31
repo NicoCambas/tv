@@ -1,0 +1,456 @@
+:root {
+  --is-4k: 2;
+}
+
+html, body {
+	font-family: "Assistant";
+	font-weight: lighter;
+	background-color: none;
+	color: #FFFFFF;
+	padding: 0;
+	margin: 0;
+	/*overflow: hidden; */
+}
+
+[v-cloak] {
+	display: none;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+	font-weight: lighter;
+	margin: 0;
+	padding: 0;
+}
+
+#titrePdp {
+	width: 600px;
+	height: auto;
+
+	position: absolute;
+	top: 20px;
+	left: 30px;
+
+	z-index: 999;
+}
+
+
+/* LAYOUT PRINCIPAL */ 
+#tvLayout {
+	display: block;
+	grid-template-columns: auto auto;
+	grid-template-rows: 1fr;
+	place-content: stretch end;
+	height: 100vh;
+	padding: 0;
+	margin: 0;
+}
+
+#mainColumn {
+	padding-top: 170px;
+}
+
+#rightColumn {
+	width: 100% /*calc(1176px / var(--is-4k));*/
+	display: grid;
+	grid-template-rows: auto auto auto auto;
+	justify-content: stretch;
+	align-content: start;
+	background-color: #1F2128;
+}
+
+
+/* EPHEMERIDE */
+#ephemeride {
+	opacity: 0;
+	display: grid;
+	grid-template-rows: auto auto auto;
+
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	align-self: end;
+	justify-self: end;
+	padding-right: calc(100px / var(--is-4k));
+	padding-bottom: calc(40px / var(--is-4k));
+}
+
+#datedujour {
+	margin: 0;
+	padding: 0;
+	font-size: calc(60pt / var(--is-4k));
+	text-transform: capitalize;
+	text-align: right;
+		
+	grid-row-start: 1;
+	grid-row-end: 2;
+	align-self: end;
+	justify-self: end;
+}
+
+#saintdujour {
+	font-size: calc(50pt / var(--is-4k));
+	margin: 0;
+	padding: 0;
+
+	grid-row-start: 2;
+	grid-row-end: 3;
+	align-self: start;
+	justify-self: end;
+}
+
+#saintdujour:before {
+  content: "St ";
+}
+
+
+/* LEVER DU SOLEIL */
+#soleildujour {
+	color: #FADF43;
+	padding: 0;
+	font-size: calc(36pt / var(--is-4k));
+
+	display: grid;
+	grid-template-columns: calc(80px / var(--is-4k)) calc(150px / var(--is-4k)) calc(80px / var(--is-4k)) calc(130px / var(--is-4k));
+
+	grid-row-start: 3;
+	grid-row-end: 4;
+	align-self: start;
+	justify-self: end;
+}
+
+.imgSunrise, .imgSunset {
+	fill: red;
+}
+
+.soleilLeverIcon {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	align-self: end;
+	justify-self: start;
+}
+
+.soleilLever {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	align-self: center;
+	justify-self: start;
+}
+
+.soleilCoucherIcon {
+	grid-column-start: 3;
+	grid-column-end: 4;
+	align-self: end;
+	justify-self: end;
+}
+
+.soleilCoucher {
+	grid-column-start: 4;
+	grid-column-end: 5;
+	align-self: center;
+	justify-self: end;
+}
+
+
+
+
+
+/* METEO */
+#meteo {
+	opacity: 0;
+	font-size: calc(36pt / var(--is-4k));
+
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto;
+
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	align-self: start;
+	justify-self: stretch;
+
+	padding: calc(20px / var(--is-4k)) calc(80px / var(--is-4k));
+	background-color: rgba(45,187,255,.1);
+}
+
+#meteoNowTemperatureActuelle {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto auto;
+
+	grid-row-start: 1;
+	grid-row-end: 2;
+	grid-column-start: 1;
+	grid-column-end: 2;
+	align-self: start;
+	justify-self: start;
+
+	font-size: calc(90pt / var(--is-4k));
+	color: #2DBBFF;
+}
+
+#meteoNowTemp {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 1;
+	grid-row-end: 3;
+	align-self: start;
+	justify-self: start;
+
+	color: #2dbbff;
+	font-size: calc(154pt / var(--is-4k));
+	line-height: calc(116pt / var(--is-4k));
+	padding-right: calc(40px / var(--is-4k));
+}
+
+#meteoNowIcon {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	align-self: center;
+	justify-self: center;
+
+	color: #fff;
+}
+
+#meteoNowWind {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	align-self: start;
+	justify-self: stretch;
+
+	font-size: calc(32pt / var(--is-4k));
+	color: #FADF43;
+
+	position: relative;
+	top: 9px;
+}
+
+#meteoNowWindIcon {
+	font-size: calc(36pt / var(--is-4k));
+}
+
+#meteoNowDescription {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 3;
+	grid-row-end: 4;
+	align-self: start;
+	justify-self: start;
+
+	font-size: calc(40pt / var(--is-4k));
+	color: #2DBBFF;
+
+	text-transform: capitalize;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+#meteoPrevisions {
+	grid-row-start: 1;
+	grid-row-end: 2;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	align-self: start;
+	justify-self: end;
+
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: stretch;
+}
+
+.meteoBoucle {
+	text-align: center;
+	min-width: calc(160px / var(--is-4k));
+}
+
+	.meteoBoucle h3 {
+		font-size: calc(36pt / var(--is-4k));
+	}
+
+	.meteoIcon {
+		color: #2DBBFF;
+		font-size: calc(56pt / var(--is-4k));
+		line-height: calc(24pt / var(--is-4k));
+	}
+
+	.meteoTemp {
+		color: #FFF;
+		font-size: calc(50pt / var(--is-4k));
+	}
+
+
+/* mod VIGICRUE */
+#vigicrue {
+	opacity: 0;
+	overflow: hidden;
+
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 3;
+	grid-row-end: 4;
+	align-self: start;
+	justify-self: stretch;
+
+	padding: calc(20px / var(--is-4k)) calc(100px / var(--is-4k));
+	font-size: calc(32pt / var(--is-4k));
+	font-weight: inherit;
+
+	background-color: #283E4F;
+	background: 2% 0 no-repeat url(../img/vagues.svg) #283E4F;
+	background-size: auto 100%;
+	margin-top: calc(2px / var(--is-4k));
+
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: baseline;
+	align-content: center;
+}
+
+#crueNiveauActuelTitre {
+	font-size: calc(30pt / var(--is-4k))
+}
+
+#crueNiveauActuel {
+	margin-right: calc(120px / var(--is-4k));
+}
+#crueNiveauActuel:after {
+	content: 'm';
+	color: white;
+	font-weight: lighter;
+	margin-left: 5px;
+}
+
+#crueDebitActuelTitre {
+	font-size: calc(30pt / var(--is-4k))
+}
+
+#crueDebitActuel, #crueNiveauActuel {
+	color: #FADF43;
+}
+
+#crueDebitActuel:after {
+	content: 'm³/s';
+	color: white;
+	margin-left: 5px;
+}
+
+
+
+/* mod EVENEMENTS */
+#evenements {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 2;
+	grid-row-end: 3;
+	align-self: start;
+	justify-self: start;
+
+	padding: 25px;
+}
+
+.evenementsBoucle {
+	display: grid;
+	grid-template-columns: 40% auto;
+	margin-bottom: 20px;
+
+	padding: 40px 0;
+	border-bottom: 1px dotted #7fbdff;
+}
+
+.eventImg {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	align-self: start;
+	justify-self: center;
+
+	margin-right: 25px;
+	box-shadow: #1f2228 0 0 10px;
+
+	max-height: calc(1000px / var(--is-4k));
+	max-width: calc(800px / var(--is-4k));
+}
+
+.eventRightColumn {
+	grid-column-start: 2;
+	grid-column-end: 3;
+	align-self: start;
+	justify-self: start;
+}
+
+.eventName {
+	font-size: calc(62pt / var(--is-4k));
+	color: #2DBBFF;
+	line-height: calc(64pt / var(--is-4k));
+}
+
+.eventAddress {
+	font-size: calc(50pt / var(--is-4k));
+}
+
+.eventDate {
+	font-size: calc(42pt / var(--is-4k));
+}
+
+.eventHoraire {
+	font-size: calc(42pt / var(--is-4k));
+	color: #2DBBFF;
+}
+
+.eventDesc {
+	margin-top: 25px;
+
+	font-size: calc(30pt / var(--is-4k));
+}
+
+
+
+
+/* ----------------------------------------------
+ * Generated by Animista on 2020-3-6 13:12:45
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+.animBlur {
+	animation-name: "text-focus-in";
+	animation-duration: 500ms;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+}
+
+.animSlideBlurRight {
+	animation-name: "slide-in-blurred-right";
+	animation-duration: 500ms;
+	/* animation-timing-function: ease-in-out; */
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+}
+
+.animSlideBlurTop {
+	animation-name: "scale-in-top";
+	animation-duration: 400ms;
+	/* animation-timing-function: ease-in-out; */
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes text-focus-in{0%{-webkit-filter:blur(12px);filter:blur(12px);opacity:0}100%{-webkit-filter:blur(0);filter:blur(0);opacity:1}}@keyframes text-focus-in{0%{-webkit-filter:blur(12px);filter:blur(12px);opacity:0}100%{-webkit-filter:blur(0);filter:blur(0);opacity:1}}
+@-webkit-keyframes slide-in-blurred-right{0%{-webkit-transform:translateX(1000px) scaleX(2.5) scaleY(.2);transform:translateX(1000px) scaleX(2.5) scaleY(.2);-webkit-transform-origin:0 50%;transform-origin:0 50%;-webkit-filter:blur(40px);filter:blur(40px);opacity:0}100%{-webkit-transform:translateX(0) scaleY(1) scaleX(1);transform:translateX(0) scaleY(1) scaleX(1);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-filter:blur(0);filter:blur(0);opacity:1}}@keyframes slide-in-blurred-right{0%{-webkit-transform:translateX(1000px) scaleX(2.5) scaleY(.2);transform:translateX(1000px) scaleX(2.5) scaleY(.2);-webkit-transform-origin:0 50%;transform-origin:0 50%;-webkit-filter:blur(40px);filter:blur(40px);opacity:0}100%{-webkit-transform:translateX(0) scaleY(1) scaleX(1);transform:translateX(0) scaleY(1) scaleX(1);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-filter:blur(0);filter:blur(0);opacity:1}}
+@-webkit-keyframes slide-in-blurred-top{0%{-webkit-transform:translateY(-1000px) scaleY(2.5) scaleX(.2);transform:translateY(-1000px) scaleY(2.5) scaleX(.2);-webkit-transform-origin:50% 0;transform-origin:50% 0;-webkit-filter:blur(40px);filter:blur(40px);opacity:0}100%{-webkit-transform:translateY(0) scaleY(1) scaleX(1);transform:translateY(0) scaleY(1) scaleX(1);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-filter:blur(0);filter:blur(0);opacity:1}}@keyframes slide-in-blurred-top{0%{-webkit-transform:translateY(-1000px) scaleY(2.5) scaleX(.2);transform:translateY(-1000px) scaleY(2.5) scaleX(.2);-webkit-transform-origin:50% 0;transform-origin:50% 0;-webkit-filter:blur(40px);filter:blur(40px);opacity:0}100%{-webkit-transform:translateY(0) scaleY(1) scaleX(1);transform:translateY(0) scaleY(1) scaleX(1);-webkit-transform-origin:50% 50%;transform-origin:50% 50%;-webkit-filter:blur(0);filter:blur(0);opacity:1}}
+@-webkit-keyframes scale-in-top{0%{-webkit-transform:scale(0);transform:scale(0);-webkit-transform-origin:50% 0;transform-origin:50% 0;opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:50% 0;transform-origin:50% 0;opacity:1}}@keyframes scale-in-top{0%{-webkit-transform:scale(0);transform:scale(0);-webkit-transform-origin:50% 0;transform-origin:50% 0;opacity:1}100%{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:50% 0;transform-origin:50% 0;opacity:1}}
