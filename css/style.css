@@ -110,13 +110,19 @@ h1,h2,h3,h4,h5,h6 {
 	padding: 0;
 	font-size: 18pt;
 
-	display: grid;
+	display: block;
 	grid-template-columns: 40px 75px 40px 65px;
 
 	grid-row-start: 3;
 	grid-row-end: 4;
 	align-self: start;
 	justify-self: end;
+}
+
+#soleildujour div {
+	display: inline-block;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 .imgSunrise, .imgSunset {
@@ -159,7 +165,7 @@ h1,h2,h3,h4,h5,h6 {
 #meteo {
 	font-size: 18pt;
 
-	display: grid;
+	display: none;
 	grid-template-columns: auto auto;
 	grid-template-rows: auto;
 
