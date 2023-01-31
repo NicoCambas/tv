@@ -62,7 +62,7 @@ h1,h2,h3,h4,h5,h6 {
 
 /* EPHEMERIDE */
 #ephemeride {
-	opacity: 0;
+	opacity: 1;
 	display: grid;
 	grid-template-rows: auto auto auto;
 
@@ -158,7 +158,7 @@ h1,h2,h3,h4,h5,h6 {
 
 /* METEO */
 #meteo {
-	opacity: 0;
+	opacity: 1;
 	font-size: calc(36pt / var(--is-4k));
 
 	display: grid;
@@ -291,7 +291,7 @@ h1,h2,h3,h4,h5,h6 {
 
 /* mod VIGICRUE */
 #vigicrue {
-	opacity: 0;
+	opacity: 1;
 	overflow: hidden;
 
 	grid-column-start: 1;
