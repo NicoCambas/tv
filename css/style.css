@@ -150,6 +150,7 @@ h1,h2,h3,h4,h5,h6 {
 	grid-column-end: 4;
 	align-self: end;
 	justify-self: end;
+	margin-left: 20px;
 }
 
 .soleilCoucher {
