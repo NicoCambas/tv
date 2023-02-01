@@ -110,7 +110,6 @@ h1,h2,h3,h4,h5,h6 {
 	color: #FADF43;
 	padding: 0;
 	font-size: 20pt;
-	text-align: right;
 
 	display: block;
 	grid-template-columns: 40px 75px 40px 65px;
@@ -168,14 +167,8 @@ h1,h2,h3,h4,h5,h6 {
 #meteo {
 	font-size: 18pt;
 
-	display: none;
-	grid-template-columns: auto auto;
-	grid-template-rows: auto;
+	display: flex;
 
-	grid-column-start: 1;
-	grid-column-end: 2;
-	grid-row-start: 2;
-	grid-row-end: 3;
 	align-self: start;
 	justify-self: stretch;
 
@@ -184,14 +177,9 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #meteoNowTemperatureActuelle {
-	display: grid;
-	grid-template-columns: auto auto;
-	grid-template-rows: auto auto auto;
+	display: flex;
+	flex-wrap: wrap;
 
-	grid-row-start: 1;
-	grid-row-end: 2;
-	grid-column-start: 1;
-	grid-column-end: 2;
 	align-self: start;
 	justify-self: start;
 
@@ -200,10 +188,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #meteoNowTemp {
-	grid-column-start: 1;
-	grid-column-end: 2;
-	grid-row-start: 1;
-	grid-row-end: 3;
 	align-self: start;
 	justify-self: start;
 
@@ -214,10 +198,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #meteoNowIcon {
-	grid-column-start: 2;
-	grid-column-end: 3;
-	grid-row-start: 1;
-	grid-row-end: 2;
 	align-self: center;
 	justify-self: center;
 
@@ -225,10 +205,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #meteoNowWind {
-	grid-column-start: 2;
-	grid-column-end: 3;
-	grid-row-start: 2;
-	grid-row-end: 3;
 	align-self: start;
 	justify-self: stretch;
 
@@ -244,10 +220,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #meteoNowDescription {
-	grid-column-start: 1;
-	grid-column-end: 3;
-	grid-row-start: 3;
-	grid-row-end: 4;
 	align-self: start;
 	justify-self: start;
 
@@ -260,10 +232,6 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #meteoPrevisions {
-	grid-row-start: 1;
-	grid-row-end: 2;
-	grid-column-start: 2;
-	grid-column-end: 3;
 	align-self: start;
 	justify-self: end;
 
