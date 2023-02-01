@@ -52,7 +52,7 @@ h1,h2,h3,h4,h5,h6 {
 
 #rightColumn {
 	width: 100%
-	display: grid;
+	display: block;
 	grid-template-rows: auto auto auto auto;
 	justify-content: stretch;
 	align-content: start;
@@ -62,13 +62,9 @@ h1,h2,h3,h4,h5,h6 {
 
 /* EPHEMERIDE */
 #ephemeride {
-	display: grid;
-	grid-template-rows: auto auto auto;
+	display: block;
+	text-align: right;
 
-	grid-column-start: 1;
-	grid-column-end: 2;
-	grid-row-start: 1;
-	grid-row-end: 2;
 	align-self: end;
 	justify-self: end;
 	padding-right: 50px;
@@ -124,7 +120,7 @@ h1,h2,h3,h4,h5,h6 {
 	text-align: right;
 	display: inline-block;
 	margin-left: 15px;
-	margin-right: 15px;
+	margin-right: 0;
 }
 
 .imgSunrise, .imgSunset {
@@ -220,6 +216,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 #meteoNowDescription {
+	display: none;
 	align-self: start;
 	justify-self: start;
 
